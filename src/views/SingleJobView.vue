@@ -13,7 +13,7 @@ const status = reactive({
   job: {}
 })
 
-const firebase_url = 'https://api-testing-c2ddc-default-rtdb.europe-west1.firebasedatabase.app'
+const firebase_url = 'YOUR_URL from firebase'
 
 const deleteJob = async () => {
   try {
