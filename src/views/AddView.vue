@@ -11,7 +11,7 @@ const toast = useToast({
 
 const route = useRoute()
 const router = useRouter()
-const firebase_url = 'https://api-testing-c2ddc-default-rtdb.europe-west1.firebasedatabase.app'
+const firebase_url = 'YOUR_URL from firebase'
 
 const form = reactive({
   typ: '',
