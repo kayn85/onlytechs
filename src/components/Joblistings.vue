@@ -12,7 +12,7 @@ defineProps({
   },
 })
 
-const firebase_url = 'https://api-testing-c2ddc-default-rtdb.europe-west1.firebasedatabase.app'
+const firebase_url = 'YOUR_URL like firebase URL'
 
 const status = reactive({
   jobs: [],
