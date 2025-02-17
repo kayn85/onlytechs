@@ -11,7 +11,7 @@ const toast = useToast({
 
 const route = useRoute()
 const router = useRouter()
-const firebase_url = 'YOUR_URL from firebase'
+const api_url = 'YOUR_API_URL from'
 
 const form = reactive({
   typ: '',
@@ -29,7 +29,7 @@ const form = reactive({
 
 const generateId = async () => {
   try {
-    const response = await axios.get(`${firebase_url}/.json`)
+    const response = await axios.get(api_url)
     const jobs = response.data
     if (jobs) {
       const ids = Object.keys(jobs).map(id => parseInt(id))
@@ -62,7 +62,7 @@ const handleSubmit = async () => {
     }
   }
   try {
-    await axios.put(`${firebase_url}/${jobId}/.json`, newJob)
+    await axios.put(`${api_url}/${jobId}`, newJob)
     toast.success('Jobbet har lagt till')
     router.push(`/jobs/${jobId}`)
   } catch (error) {
