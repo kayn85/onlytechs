@@ -20,7 +20,7 @@ const status = reactive({
 
 onMounted(async () => {
   try {
-    const response = await axios.get(`${api_url}`)
+    const response = await axios.get(api_url)
     status.jobs = response.data
   } catch (error) {
     console.error('Hämta jobb. Misslyckades ', error)
