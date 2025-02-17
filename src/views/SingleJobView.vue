@@ -13,13 +13,13 @@ const status = reactive({
   job: {}
 })
 
-const firebase_url = 'YOUR_URL from firebase'
+const api_url = 'YOUR_API_URL'
 
 const deleteJob = async () => {
   try {
     const confirm = window.confirm('Är du säker på att du vill ta bort detta jobbet?')
     if (confirm) {
-      await axios.delete(`${firebase_url}/${jobId}/.json`)
+      await axios.delete(`${api_url}/${jobId}`)
       router.push('/jobs')
     }
   } catch (error) {
@@ -29,7 +29,7 @@ const deleteJob = async () => {
 
 onMounted(async () => {
   try {
-    const response = await axios.get(`${firebase_url}/${jobId}/.json`)
+    const response = await axios.get(`${api_url}/${jobId}`)
     status.job = response.data
   } catch (error) {
     console.error('Gick ej att hämta jobb.', error)
