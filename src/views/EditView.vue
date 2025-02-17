@@ -17,7 +17,7 @@ const route = useRoute()
 const router = useRouter()
 const jobId = route.params.id
 
-const firebase_url = 'YOUR_URL from firebase'
+const api_url = 'YOUR_API_URL'
 
 const form = reactive({
   typ: '',
@@ -55,7 +55,7 @@ const handleSubmit = async () => {
     },
   }
   try {
-    await axios.put(`${firebase_url}/${jobId}.json`, updateJob)
+    await axios.put(`${api_url}/${jobId}`, updateJob)
     toast.success('Jobbet har uppdaterats.')
     router.push(`/jobs/${jobId}`)
   } catch (error) {
@@ -66,7 +66,7 @@ const handleSubmit = async () => {
 
 onMounted(async () => {
   try {
-    const response = await axios.get(`${firebase_url}/${jobId}/.json`)
+    const response = await axios.get(`${api_url}/${jobId}`)
     status.job = response.data
     form.typ = status.job.typ
     form.title = status.job.title
