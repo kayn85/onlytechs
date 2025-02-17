@@ -12,7 +12,7 @@ defineProps({
   },
 })
 
-const firebase_url = 'YOUR_URL from firebase'
+const api_url = 'YOUR_API_URL'
 
 const status = reactive({
   jobs: [],
@@ -20,7 +20,7 @@ const status = reactive({
 
 onMounted(async () => {
   try {
-    const response = await axios.get(`${firebase_url}/.json`)
+    const response = await axios.get(`${api_url}`)
     status.jobs = response.data
   } catch (error) {
     console.error('Hämta jobb. Misslyckades ', error)
