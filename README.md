@@ -1,6 +1,6 @@
 # Only Techs
 
-"Vue 3 SAP-sidan för utvecklare som letar jobb eller för företag som kan lägga in jobb."
+"Vue 3 SPA-sidan för utvecklare som letar jobb eller för företag som kan lägga in jobb."
 
 Jag har byggt sidan med:
 
