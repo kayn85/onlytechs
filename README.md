@@ -10,3 +10,4 @@ Jag har byggt sidan med:
 4. axios kan GET, PUT, POST och DELETE därifrån.
 
 5. DEMO: https://onlytechs.netlify.app/
+<img src="https://github.com/kayn85/kayn85/blob/main/onlytechs-screenshot.png">
